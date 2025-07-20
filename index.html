@@ -1,34 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shree Balaji Drilling</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Shree Balaji Borewell</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo" data-i18n="title">श्री बालाजी ड्रिलिंग</div>
-    <div class="language-switcher">
-      <button onclick="setLanguage('hi')">हिंदी</button>
-      <button onclick="setLanguage('en')">English</button>
-    </div>
-  </nav>
+  <div class="language-switch">
+    <button onclick="setLanguage('hi')">हिन्दी</button>
+    <button onclick="setLanguage('en')">English</button>
+  </div>
 
-  <header>
-    <h1 data-i18n="welcome">आपका स्वागत है</h1>
-    <p data-i18n="description">हम बोरिंग और पाइप सर्विसेज प्रदान करते हैं</p>
-  </header>
+  <h1 data-lang-hi="पार्टी प्रविष्टि फॉर्म" data-lang-en="Party Entry Form">पार्टी प्रविष्टि फॉर्म</h1>
 
-  <section>
-    <h2 data-i18n="services">हमारी सेवाएं</h2>
-    <ul>
-      <li data-i18n="boring_service">बोरिंग सेवा</li>
-      <li data-i18n="pipe_service">पाइप फिटिंग</li>
-      <li data-i18n="commission_tracking">कमीशन ट्रैकिंग</li>
-    </ul>
-  </section>
+  <!-- ✅ यहाँ पर फॉर्म Merge कर रहे हैं -->
+  <form action="https://shreebalajiborwell.infinityfreeapp.com/submit_entry.php" method="POST">
+    <label data-lang-hi="पार्टी का नाम" data-lang-en="Party Name">
+      पार्टी का नाम:
+      <input type="text" name="party_name" placeholder="पार्टी का नाम" required>
+    </label>
+    <br><br>
+    <button type="submit" data-lang-hi="जमा करें" data-lang-en="Submit">जमा करें</button>
+  </form>
 
-  <script src="lang.js"></script>
 </body>
 </html>
