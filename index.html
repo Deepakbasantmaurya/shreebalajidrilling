@@ -1,28 +1,66 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shree Balaji Borewell</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="language-switch">
-    <button onclick="setLanguage('hi')">हिन्दी</button>
-    <button onclick="setLanguage('en')">English</button>
+  <div class="container">
+    <div class="lang-buttons">
+      <button id="hindiBtn">हिंदी</button>
+      <button id="englishBtn">English</button>
+    </div>
+
+    <h1 data-lang-hindi="श्री बालाजी बोरवेल फॉर्म" data-lang-english="Shree Balaji Borewell Form">
+      श्री बालाजी बोरवेल फॉर्म
+    </h1>
+
+    <form action="https://shreebalajiborewell.infinityfreeapp.com/submit_entry.php" method="POST">
+      <label data-lang-hindi="पार्टी का नाम" data-lang-english="Party Name">पार्टी का नाम</label>
+      <input type="text" name="party_name" required />
+
+      <label data-lang-hindi="मोबाइल नंबर" data-lang-english="Mobile Number">मोबाइल नंबर</label>
+      <input type="text" name="mobile" required />
+
+      <label data-lang-hindi="पता" data-lang-english="Address">पता</label>
+      <input type="text" name="address" required />
+
+      <label data-lang-hindi="एजेंट का नाम" data-lang-english="Agent Name">एजेंट का नाम</label>
+      <input type="text" name="agent_name" required />
+
+      <label data-lang-hindi="बोरिंग फीट" data-lang-english="Boring Feet">बोरिंग फीट</label>
+      <input type="number" name="boring_feet" required />
+
+      <label data-lang-hindi="बोरिंग रेट" data-lang-english="Boring Rate">बोरिंग रेट</label>
+      <input type="number" name="boring_rate" required />
+
+      <label data-lang-hindi="पाइप फीट" data-lang-english="Pipe Feet">पाइप फीट</label>
+      <input type="number" name="pipe_feet" required />
+
+      <label data-lang-hindi="पाइप रेट" data-lang-english="Pipe Rate">पाइप रेट</label>
+      <input type="number" name="pipe_rate" required />
+
+      <label data-lang-hindi="कितना जमा हुआ" data-lang-english="Amount Paid">कितना जमा हुआ</label>
+      <input type="number" name="paid" required />
+
+      <label data-lang-hindi="कितना बाकी रहा" data-lang-english="Amount Due">कितना बाकी रहा</label>
+      <input type="number" name="due" required />
+
+      <label data-lang-hindi="कमीशन" data-lang-english="Commission">कमीशन</label>
+      <input type="number" name="commission" required />
+
+      <label data-lang-hindi="गाड़ी पर खर्च (डीजल)" data-lang-english="Diesel Expense">गाड़ी पर खर्च (डीजल)</label>
+      <input type="number" name="diesel" required />
+
+      <label data-lang-hindi="मैनेजर खर्च" data-lang-english="Manager Expense">मैनेजर खर्च</label>
+      <input type="number" name="manager_expense" required />
+
+      <button type="submit" data-lang-hindi="जमा करें" data-lang-english="Submit">जमा करें</button>
+    </form>
   </div>
 
-  <h1 data-lang-hi="पार्टी प्रविष्टि फॉर्म" data-lang-en="Party Entry Form">पार्टी प्रविष्टि फॉर्म</h1>
-
-  <!-- ✅ यहाँ पर फॉर्म Merge कर रहे हैं -->
-  <form action="https://shreebalajiborwell.infinityfreeapp.com/submit_entry.php" method="POST">
-    <label data-lang-hi="पार्टी का नाम" data-lang-en="Party Name">
-      पार्टी का नाम:
-      <input type="text" name="party_name" placeholder="पार्टी का नाम" required>
-    </label>
-    <br><br>
-    <button type="submit" data-lang-hi="जमा करें" data-lang-en="Submit">जमा करें</button>
-  </form>
-
+  <script src="script.js"></script>
 </body>
 </html>
